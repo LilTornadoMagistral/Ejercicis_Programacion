@@ -1,0 +1,72 @@
+:root{
+	--bg:#0f1720; --surface:#0b1220; --card:#0f1a2b; --muted:#9aa6b2; --accent:#60d394;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#fff;}
+
+/* Full-page background gradient that covers the entire viewport */
+.app-root, body {
+	min-height:100vh;
+	background: linear-gradient(135deg, #021428 0%, #07102a 40%, #071a2b 100%);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Global flash classes used by the highlight directive */
+.flash-up{outline:4px solid rgba(96,211,148,0.12);transition:outline .25s}
+.flash-down{outline:4px solid rgba(255,123,123,0.12);transition:outline .25s}
+
+input,button,select,textarea{color:#fff}
+input::placeholder{color:rgba(255,255,255,0.5)}
+
+/* Layout helpers */
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.site-footer{padding:14px 0;color:var(--muted);text-align:center}
+
+/* Per-card controls (moved from component styles to global styles so they apply) */
+.card.alert{box-shadow:0 0 0 3px rgba(255,159,67,0.08), 0 8px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,159,67,0.18)}
+.alert-badge{background:#ff9f43;color:#fff;padding:4px 8px;border-radius:6px;font-weight:700;font-size:12px}
+.alert-input{margin:8px 0}
+
+.alert-input input[type=number]{
+	background: rgba(255,255,255,0.03);
+	border:1px solid rgba(255,255,255,0.06);
+	padding:6px 8px;border-radius:6px;color:#fff;width:120px;text-align:right
+}
+.alert-input input[type=number]::-webkit-outer-spin-button,
+.alert-input input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none; margin: 0;
+}
+.alert-input input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+.alert-input input[type=number]::-ms-clear,
+.alert-input input[type=number]::-ms-expand { display: none; }
+.alert-input input[type=number]::placeholder { color: rgba(255,255,255,0.5); }
+.step-select{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:4px 8px;border-radius:6px;margin-right:8px;color:#fff;width:64px}
+.alert-input{display:flex;align-items:center;gap:8px;justify-content:center}
+
+/* Style select dropdown options for dark theme */
+.step-select option{background:transparent;color:#fff}
+
+.step-controls{display:flex;align-items:center;gap:6px}
+.step-buttons{display:flex;flex-direction:column;margin-left:6px}
+.step-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:2px;border-radius:4px;cursor:pointer;font-size:11px;line-height:11px;width:20px;height:16px}
+.step-btn.up{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.step-btn.down{border-top-left-radius:0;border-top-right-radius:0}
+.step-btn:active{transform:translateY(1px)}
+.percent{color:rgba(255,255,255,0.9);margin-left:6px;margin-right:6px}
+
+/* input wrapper to show % inside the input */
+.input-wrap{position:relative;display:inline-block}
+.input-wrap .threshold-input{padding-right:44px;text-align:left;padding-left:8px;width:84px;height:32px}
+.input-wrap .threshold-input::placeholder{text-align:left}
+.input-wrap .threshold-input{direction:ltr;text-align:left !important}
+.percent-inside{position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;color:rgba(255,255,255,0.9);font-weight:600}
+
+/* Global button styles used by landing and back buttons */
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:inherit;background:transparent;border:1px solid transparent}
+.btn.primary{background:var(--accent);color:#04201a;border-color:transparent}
+.btn.outline{border:1px solid rgba(255,255,255,0.08);background:transparent;color:inherit}
+.controls .btn{padding:6px 10px;font-size:13px}
+

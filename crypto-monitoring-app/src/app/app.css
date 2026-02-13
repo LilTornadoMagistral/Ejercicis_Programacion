@@ -1,0 +1,57 @@
+:root{
+	--bg:#0f1720;--surface:#0b1220;--card:#0f1a2b;--muted:#9aa6b2;--accent:#60d394;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;color:#e6eef6;background:linear-gradient(180deg,#051023 0%,var(--bg) 100%);}
+.container{max-width:1100px;margin:0 auto;padding:18px;}
+.top-controls{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.main-panel{padding:10px;}
+.site-footer{padding:14px 0;color:var(--muted);text-align:center;}
+
+.flash-up{outline:4px solid rgba(96,211,148,0.12);transition:outline .25s;}
+.flash-down{outline:4px solid rgba(255,123,123,0.12);transition:outline .25s;}
+
+/* Navbar */
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.04)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700}
+.brand .logo{width:36px;height:36px;border-radius:8px;display:inline-block;object-fit:cover}
+.brand .logo[src$="favicon.ico"]{background:transparent}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-actions input{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 8px;border-radius:6px;color:#fff}
+
+/* Typography */
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#fff}
+input,button,select,textarea{color:#fff}
+
+input::placeholder{color:rgba(255,255,255,0.5)}
+
+/* Card alert styles */
+.card.alert{box-shadow:0 0 0 3px rgba(255,159,67,0.08), 0 8px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,159,67,0.18)}
+.alert-badge{background:#ff9f43;color:#fff;padding:4px 8px;border-radius:6px;font-weight:700;font-size:12px}
+.alert-input{margin:8px 0}
+
+/* Per-card threshold input styling and remove numeric spinner */
+.alert-input input[type=number]{
+	background: rgba(255,255,255,0.03);
+	border:1px solid rgba(255,255,255,0.06);
+	padding:6px 8px;border-radius:6px;color:#fff;width:120px;text-align:right
+}
+.alert-input input[type=number]::-webkit-outer-spin-button,
+.alert-input input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none; margin: 0;
+}
+.alert-input input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+
+/* Remove increment/decrement UI in Edge/IE modern engines */
+.alert-input input[type=number]::-ms-clear,
+.alert-input input[type=number]::-ms-expand { display: none; }
+
+/* Label style: black text per request */
+.alert-input label{ color:#0b0b0b; font-weight:600 }
+
+/* Placeholder color for the per-card input (dark placeholder on white bg) */
+.alert-input input[type=number]::placeholder { color: rgba(255,255,255,0.5); }
+
+.step-select{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:6px;margin-right:8px;color:#fff}
+.alert-input{display:flex;align-items:center;gap:8px}
+
