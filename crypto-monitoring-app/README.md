@@ -3,6 +3,23 @@
 
 Este proyecto fue generado usando [Angular CLI](https://github.com/angular/angular-cli) versión 21.1.3.
 
+## Instalación
+
+Antes de ejecutar la aplicación, instala las dependencias del proyecto con npm:
+
+```bash
+npm install
+```
+
+Luego inicia el servidor de desarrollo:
+
+```bash
+npm start
+# o alternativamente:
+ng serve
+```
+
+
 ## Servidor de desarrollo
 
 Para iniciar un servidor de desarrollo local, ejecuta:
